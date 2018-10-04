@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
     <head>
         <meta charset = "utf-8">
@@ -10,6 +11,29 @@
         <h1>
             blablabalablablaba
         </h1>
-        {{insert_me}}
+        <div class="collegelist">
+            {% if ck %}
+            <table>
+                <thead>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Location</th>
+                </thead>
+                {% for item in ck %}
+            <tr>
+                <td> {{item.rank}} </td>
+                <td> {{item.name}} </td>
+                <td> {{item.location}} </td>
+            </tr>
+            {% endfor %}
+            </table>
+            {% else %}
+            <p>NO ACCESS RECORD FOUND</p>
+            {% endif %}
+        </div>
+        <h1>
+            blablabalablablaba
+        </h1>
+    <img src = "{% static "images/pic.jpg" %}" alt ="not showing"/>
     </body>
 </html>
