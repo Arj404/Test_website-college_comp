@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from django.conf.urls import include
+from college import views
 
 
 urlpatterns = [
     url(r'^$',include('college.urls')),
+    url(r'^form/',views.form_name,name = 'form'),
+    url(r'^user/',views.users,name = 'form'),
     path('admin/', admin.site.urls),
 ]
