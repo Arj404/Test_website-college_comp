@@ -1,8 +1,8 @@
 from django import forms
 from django.core import validators
-from college.models import User
+from forms.models import User
 
-class FormName(forms.Form):
+class Form_Name(forms.Form):
     name = forms.CharField()
     email = forms.EmailField()
     text = forms.CharField(widget=forms.Textarea)

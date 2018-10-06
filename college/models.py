@@ -7,14 +7,3 @@ class list(models.Model) :
     def __str__(self):
         return self.name
 
-class details(models.Model) :
-    name = models.ForeignKey(list , on_delete=models.DO_NOTHING)
-    year_of_stablishment = models.IntegerField()
-    mode_of_admission = models.CharField(max_length=300)
-    def __str__(self):
-        return self.name
-
-class User(models.Model) :
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=200,unique=True)
