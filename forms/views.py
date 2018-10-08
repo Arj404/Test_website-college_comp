@@ -23,4 +23,4 @@ def users(request):
             return index(request)
         else:
             print("ERROR")
-    return render(request, 'user.html', context={'form2': form})
+    return render(request, 'Msc/user.html', context={'form2': form})
