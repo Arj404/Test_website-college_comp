@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static %}
+{% load staticfiles %}
 <html lang="en">
 <head>
     <title>HacktoberFest</title>
@@ -23,7 +23,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-    <div class="bg-contact3" style="background-image: url('images/bg-01.jpg');>
+    <div class="bg-contact3" style="background-image: url('{% static 'images/bg-01.jpg' %}');>
         <div class="container-contact3">
 			<div class="wrap-contact3">
                  <form class="contact3-form validate-form" method="POST">
